@@ -477,7 +477,7 @@ while password_entered != correct_password
   end
 
   puts "Please enter your password."
-  name_entered = gets.strip
+  password_entered = gets.strip
 end
 {% endhighlight %}
 
