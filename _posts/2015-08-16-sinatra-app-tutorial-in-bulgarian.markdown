@@ -303,7 +303,7 @@ HTML е основният градивен блок на сайтовете. П
 
 - Текст, още наричан (текстов) низ – нещо, заградено в единични или двойни кавички: `'some text'`, `"more text here"`, ...
 - Числа – цели или с плаваща запетая: `5`, `42`, `3.14`, ...
-- Съставни типове данни – списъци, речници: `["apple", "orange", "pear", "melon"]`, ...
+- Съставни типове данни – списъци, речници: `["apple", "orange", "pear", "melon"]`, `{'one' => 'eins', 'two' => 'zwei', 'three' => 'drei'}`, ...
 - Наши собствени типове данни – продукт, поръчка, потребител, ...
 
 Причината за разграничаването на типовете на данните е, че с всеки тип данни могат да се правят различни операции – например, числата могат да се умножават, текстът – не.
@@ -471,11 +471,12 @@ correct_password = "very-secret-password-that-no-one-else-knows"
 password_entered = ""
 
 while password_entered != correct_password
-  if password_entered != ""
+  if password_entered == ''
+    puts "Please enter your password."
+  else
     puts "You entered " + password_entered + " but that is not the correct password. Please try again."
   end
 
-  puts "Please enter your password."
   password_entered = gets.strip
 end
 {% endhighlight %}
